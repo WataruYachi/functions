@@ -4,6 +4,7 @@ function templa -a type name
 
     set repo ~/.template/repo.tex
     set slide ~/.template/slides.tex
+    set memo ~/.template/memo.tex
     set tex .tex
 
     if test "$name" = ""
@@ -15,6 +16,8 @@ function templa -a type name
             tempcopy $repo $name $tex
         case slide
             tempcopy $slide $name $tex
+        case memo
+            tempcopy $memo $name $tex
         case *
             echo file type invalid
         end
