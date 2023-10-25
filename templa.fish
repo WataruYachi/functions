@@ -35,5 +35,5 @@ end
 function tempcopy -a from fn ex
     echo "copy template from $from"
     set n (filename $fn $ex)
-    cp -p $from $n
+    cp -p -i $from $n
 end
