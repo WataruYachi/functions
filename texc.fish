@@ -1,6 +1,8 @@
 #!/usr/bin/env fish
 
 function texc -a file
-    lualatex $file.tex
-    evince $file.pdf &
+    lualatex -shell-escape $file.tex
+    if type -q evince
+        evince $file.pdf &
+    end
 end
